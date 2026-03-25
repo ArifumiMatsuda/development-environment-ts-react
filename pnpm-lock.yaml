@@ -48,6 +48,9 @@ importers:
       aws-cdk-lib:
         specifier: ^2.244.0
         version: 2.244.0(constructs@10.6.0)
+      cdk-nag:
+        specifier: ^2.37.20
+        version: 2.37.55(aws-cdk-lib@2.244.0(constructs@10.6.0))(constructs@10.6.0)
       constructs:
         specifier: ^10.5.0
         version: 10.6.0
@@ -698,6 +701,12 @@ packages:
   cac@6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
+
+  cdk-nag@2.37.55:
+    resolution: {integrity: sha512-xcAkygwbph3pp7N0UEzJBmXUH/MIsluV7DYJSeZ/V3yCr0Y0QaRGO298WyD6mi4K+Rmnpl+EJoWUxcOblOqLKA==}
+    peerDependencies:
+      aws-cdk-lib: ^2.176.0
+      constructs: ^10.0.5
 
   chai@5.3.3:
     resolution: {integrity: sha512-4zNhdJD/iOjSH0A05ea+Ke6MU5mmpQcbQsSOkgdaUMJ9zTlDTD/GYlwohmIE2u0gaxHYiVHEn1Fw9mZ/ktJWgw==}
@@ -1547,6 +1556,11 @@ snapshots:
       balanced-match: 4.0.4
 
   cac@6.7.14: {}
+
+  cdk-nag@2.37.55(aws-cdk-lib@2.244.0(constructs@10.6.0))(constructs@10.6.0):
+    dependencies:
+      aws-cdk-lib: 2.244.0(constructs@10.6.0)
+      constructs: 10.6.0
 
   chai@5.3.3:
     dependencies:
