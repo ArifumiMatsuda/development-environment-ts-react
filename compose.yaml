@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    working_dir: /workspace
+    init: true
+    tty: true
+    stdin_open: true
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      PNPM_STORE_DIR: /pnpm/store
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+      - web_node_modules:/workspace/apps/web/node_modules
+      - cdk_node_modules:/workspace/infra/cdk/node_modules
+      - pnpm_store:/pnpm/store
+    command: >
+      bash -lc "sfw pnpm install && pnpm --filter @repo/web dev --host 0.0.0.0"
+
+volumes:
+  node_modules:
+  web_node_modules:
+  cdk_node_modules:
+  pnpm_store:
