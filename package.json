@@ -2,6 +2,7 @@
   "name": "development-environment-ts-react",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow@1.2.2 pnpm",
     "dev": "pnpm --filter @repo/web dev",
     "build": "pnpm -r build",
     "lint": "ultracite check",
