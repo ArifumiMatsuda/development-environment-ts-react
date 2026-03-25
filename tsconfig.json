@@ -3,5 +3,8 @@
   "references": [
     { "path": "./apps/web" },
     { "path": "./infra/cdk" }
-  ]
+  ],
+  "compilerOptions": {
+    "strictNullChecks": true
+  }
 }
