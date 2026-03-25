@@ -19,7 +19,7 @@ services:
       - cdk_node_modules:/workspace/infra/cdk/node_modules
       - pnpm_store:/pnpm/store
     command: >
-      bash -lc "sfw pnpm install && pnpm --filter @repo/web dev --host 0.0.0.0"
+      bash -lc "sfw pnpm install -y && pnpm --filter @repo/web dev --host 0.0.0.0"
 
 volumes:
   node_modules:
