@@ -29,6 +29,7 @@ TypeScript ベースの開発環境テンプレートです。フロントエン
 - Docker / Docker Compose
 - Biome
 - Ultracite
+- Trivy
 
 ## ディレクトリ構成
 
@@ -137,6 +138,8 @@ pnpm fix
 ```bash
 pnpm scan
 ```
+
+`pnpm scan` は Trivy を使って、依存関係の脆弱性、設定不備、シークレット混入を静的にスキャンします。
 
 ## 補足
 
